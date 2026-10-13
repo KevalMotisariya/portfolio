@@ -1,14 +1,10 @@
+/* Universal Rules */
 * {
   box-sizing: border-box;
   margin: 0;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.5;
-  margin: 0 16px;
-}
-
+/* Common Dimension and Font Sizing Rules */
 :root {
   --space-1: 4px;
   --space-2: 8px;
@@ -17,8 +13,33 @@ body {
   --space-6: 24px;
   --space-8: 32px;
   --space-12: 48px;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.75rem;
 }
 
+/* Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0 16px;
+  font-size: var(--font-size-base);
+}
+
+/* Heading section styles */
+.heading h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: var(--space-2);
+}
+
+.heading h1 + p {
+  font-size: var(--font-size-lg);
+  line-height: 1.5;
+}
+
+/* Navigation Styles */
 nav {
   display: flex;
   flex-direction: row;
@@ -27,16 +48,18 @@ nav {
   margin: var(--space-6) 0;
 }
 
+/* About Section Styles */
 .about-us-section {
   margin: var(--space-6) 0;
 }
 
+/* Projects Section Styles */
 .projects-section {
   padding: var(--space-6) 0;
 }
 
 .projects-section > h2 {
-  font-size: 1.75rem;
+  font-size: var(--font-size-xl);
   line-height: 1.2;
   margin-bottom: var(--space-6);
 }
@@ -60,21 +83,21 @@ nav {
 }
 
 .project-title {
-  font-size: 1.125rem;
+  font-size: var(--font-size-lg);
   line-height: 1.4;
   font-weight: 700;
 }
 
 .project-downloads {
   margin-top: var(--space-1);
-  font-size: 0.875rem;
+  font-size: var(--font-size-sm);
   color: #666;
 }
 
 .project-link {
   display: inline-block;
   margin-top: var(--space-3);
-  font-size: 0.875rem;
+  font-size: var(--font-size-sm);
   font-weight: 600;
 }
 
@@ -94,6 +117,7 @@ nav {
   text-align: left;
 }
 
+/* Contact Section Styles */
 .contact-section > h2 {
   margin-bottom: var(--space-4);
 }
